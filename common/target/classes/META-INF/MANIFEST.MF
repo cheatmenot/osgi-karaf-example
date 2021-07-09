@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 15
+Bundle-Description: The Apache Software Foundation provides support for 
+ the Apache community of open-source software projects.    The Apache pr
+ ojects are characterized by a collaborative, consensus based developmen
+ t process, an open and    pragmatic software license, and a desire to c
+ reate high quality software that leads the way in its field.    We cons
+ ider ourselves not simply a group of projects sharing a server, but rat
+ her a community of developers    and users.
+Bundle-DocURL: http://karaf.apache.org/
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Eycads :: Common
+Bundle-SymbolicName: com.eycads.common
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 4.2.11
+Export-Package: com.eycads.common;version="4.2.11"
+Import-Package: javassist.util.proxy,javax.persistence;version="[2,3)",o
+ rg.hibernate.proxy
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"

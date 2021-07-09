@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 15
+Bundle-Description: The Apache Software Foundation provides support for 
+ the Apache community of open-source software projects.    The Apache pr
+ ojects are characterized by a collaborative, consensus based developmen
+ t process, an open and    pragmatic software license, and a desire to c
+ reate high quality software that leads the way in its field.    We cons
+ ider ourselves not simply a group of projects sharing a server, but rat
+ her a community of developers    and users.
+Bundle-DocURL: http://karaf.apache.org/
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Eycads :: Rest
+Bundle-SymbolicName: com.eycads.rest
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 4.2.11
+Import-Package: com.eycads.common;version="[4.2,5)",com.fasterxml.jackso
+ n.jaxrs.json;version="[2.10,3)",javax.ws.rs;version="[2.1,3)",org.apach
+ e.cxf;version="[3.4,4)",org.apache.cxf.endpoint;version="[3.4,4)",org.a
+ pache.cxf.jaxrs;version="[3.4,4)",org.osgi.framework;version="[1.8,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))",o
+ sgi.extender;filter:="(&(osgi.extender=osgi.component)(version>=1.3.0)(
+ !(version>=2.0.0)))"
+Service-Component: OSGI-INF/com.eycads.rest.RestService.xml
