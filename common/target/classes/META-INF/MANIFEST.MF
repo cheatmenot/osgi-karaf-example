@@ -14,7 +14,8 @@ Bundle-Name: Eycads :: Common
 Bundle-SymbolicName: com.eycads.common
 Bundle-Vendor: The Apache Software Foundation
 Bundle-Version: 4.2.11
-Export-Package: com.eycads.common;version="4.2.11"
+Export-Package: com.eycads.common;uses:="javax.persistence";version="4.2
+ .11"
 Import-Package: javassist.util.proxy,javax.persistence;version="[2,3)",o
  rg.hibernate.proxy
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"

@@ -16,11 +16,18 @@
  */
 package com.eycads.common;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * A regular POJO.
  */
+@Entity
 public class Booking {
 
+    @Id
+    @GeneratedValue
     private Long id;
     private String customer;
     private String flight;

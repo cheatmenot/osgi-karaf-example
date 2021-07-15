@@ -38,6 +38,7 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public void add(Booking booking) {
+        System.out.println("jpad add: " + booking);
         jpaTemplate.tx(TransactionType.RequiresNew, entityManager -> {
             entityManager.persist(booking);
             entityManager.flush();

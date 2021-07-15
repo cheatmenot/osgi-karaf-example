@@ -14,11 +14,11 @@ import java.util.Map;
 public class BookingServiceRest implements ApiCrudInterface {
 
 //    @Reference
-    private BookingService bookingService;
+//    private BookingService bookingService;
 
-    BookingServiceRest(BookingService svc){
-        bookingService = svc;
-    }
+//    BookingServiceRest(BookingService svc){
+//        bookingService = svc;
+//    }
     
     private final Map<Long, Booking> bookings = new HashMap<>();
 
@@ -27,7 +27,9 @@ public class BookingServiceRest implements ApiCrudInterface {
     @Produces("application/json")
     @GET
     public Collection<Booking> list() {
-        return bookingService.list();
+        System.out.println(ServiceCatcher.getBookingService());
+        return ServiceCatcher.getBookingService().list();
+//        return bookingService.list();
 //        return bookings.values();
     }
 
@@ -44,7 +46,8 @@ public class BookingServiceRest implements ApiCrudInterface {
     @Consumes("application/json")
     @POST
     public void add(Booking booking) {
-        bookings.put(booking.getId(), booking);
+        ServiceCatcher.getBookingService().add(booking);
+//        bookings.put(booking.getId(), booking);
     }
 
     @Override
