@@ -33,6 +33,17 @@
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+
+<!--            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>-->
+<!--            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db"/>-->
+<!--            <property name="javax.persistence.jdbc.user" value="alona"/>-->
+<!--            <property name="javax.persistence.jdbc.password" value="djrumix"/>-->
+
+<!--            <property name="hibernate.show_sql" value="true"/>-->
+<!--            <property name="hibernate.format_sql" value="true"/>-->
+<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+<!--            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>-->
+
         </properties>
     </persistence-unit>
 

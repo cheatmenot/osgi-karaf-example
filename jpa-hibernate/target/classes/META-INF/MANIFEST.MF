@@ -16,9 +16,8 @@ Bundle-Vendor: The Apache Software Foundation
 Bundle-Version: 4.2.11
 DynamicImport-Package: javassist.util.proxy,org.hibernate.proxy
 Import-Package: com.eycads.common;version="[4.2,5)",javassist.util.proxy
- ;resolution:=optional,javax.persistence;version="[2,3)",org.apache.arie
- s.jpa.template;version="[1.0,2)",org.hibernate.proxy;resolution:=option
- al
+ ;resolution:=optional;version="[3.27,4)",javax.persistence;version="[2,
+ 3)",org.hibernate.proxy;resolution:=optional;version="[5.4,6)"
 Meta-Persistence: META-INF/persistence.xml
 Provide-Capability: osgi.service;uses:="com.eycads.common";objectClass="
  com.eycads.common.BookingService",osgi.service;effective:=active;object
@@ -32,12 +31,10 @@ Provide-Capability: osgi.service;uses:="com.eycads.common";objectClass="
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))",o
  sgi.extender;filter:="(&(osgi.extender=osgi.component)(version>=1.3.0)(
  !(version>=2.0.0)))",osgi.extender;osgi.extender="aries.jpa",osgi.servi
- ce;effective:=active;filter:="(objectClass=org.apache.aries.jpa.templat
- e.JpaTemplate)",osgi.service;effective:=active;javax.persistence.provid
- er="org.hibernate.jpa.HibernatePersistenceProvider";objectClass="javax.
- persistence.spi.PersistenceProvider",osgi.service;effective:=active;obj
- ectClass="javax.transaction.TransactionManager",osgi.service;effective:
- =active;filter:="(osgi.jndi.service.name=booking)";objectClass="javax.s
- ql.DataSource"
-Service-Component: OSGI-INF/com.eycads.jpa.hibernate.BookingServiceImpl.
- xml
+ ce;effective:=active;javax.persistence.provider="org.hibernate.jpa.Hibe
+ rnatePersistenceProvider";objectClass="javax.persistence.spi.Persistenc
+ eProvider",osgi.service;effective:=active;objectClass="javax.transactio
+ n.TransactionManager",osgi.service;effective:=active;filter:="(osgi.jnd
+ i.service.name=booking)";objectClass="javax.sql.DataSource"
+Service-Component: OSGI-INF/com.eycads.jpa.hibernate.BookingHibernateImp
+ l.xml

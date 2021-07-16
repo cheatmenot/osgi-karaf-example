@@ -26,6 +26,7 @@
         <feature>jndi</feature>
         <feature>pax-jdbc-config</feature>
         <feature>pax-jdbc-h2</feature>
+<!--        <feature>pax-jdbc-mysql</feature>-->
         <feature>pax-jdbc-pool-dbcp2</feature>
         <feature>jdbc</feature>
         <feature dependency="true">aries-blueprint</feature>
@@ -54,6 +55,12 @@
             osgi.jdbc.driver.class=org.h2.Driver
             databaseName=./booking;create=true
             dataSourceName=booking
+<!--            osgi.jdbc.driver.class=com.mysql.jdbc.Driver-->
+<!--            databaseName=db-->
+<!--            user=alona-->
+<!--            url=jdbc:mysql://localhost:3306/db-->
+<!--            password=djrumix-->
+<!--            dataSourceName=booking-->
         </config>
         <capability>
             osgi.service;objectClass=javax.sql.DataSource;effective:=active;osgi.jndi.service.name=booking

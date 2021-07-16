@@ -6,17 +6,73 @@
 Eycads :: JPA :: Hibernate
 
 
+From: 'an unknown organization'
+  - AntLR Parser Generator (http://www.antlr.org/) antlr:antlr:jar:2.7.7
+    License: BSD License  (http://www.antlr.org/license.html)
+  - Protocol Buffers [Core] (https://developers.google.com/protocol-buffers/protobuf-java/) com.google.protobuf:protobuf-java:bundle:3.11.4
+    License: 3-Clause BSD License  (https://opensource.org/licenses/BSD-3-Clause)
+  - javax.persistence-api (https://github.com/javaee/jpa-spec) javax.persistence:javax.persistence-api:jar:2.2
+    License: Eclipse Public License v1.0  (http://www.eclipse.org/legal/epl-v10.html)    License: Eclipse Distribution License v. 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+  - Byte Buddy (without dependencies) (https://bytebuddy.net/byte-buddy) net.bytebuddy:byte-buddy:jar:1.10.21
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - dom4j (http://dom4j.github.io/) org.dom4j:dom4j:jar:2.1.3
+    License: BSD 3-clause New License  (https://github.com/dom4j/dom4j/blob/master/LICENSE)
+  - Java Persistence API, Version 2.1 (http://hibernate.org) org.hibernate.javax.persistence:hibernate-jpa-2.1-api:jar:1.0.2.Final
+    License: Eclipse Public License (EPL), Version 1.0  (http://www.eclipse.org/legal/epl-v10.html)    License: Eclipse Distribution License (EDL), Version 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+From: 'Eclipse Foundation' (https://www.eclipse.org)
+  - Jakarta Activation (https://github.com/eclipse-ee4j/jaf/jakarta.activation) com.sun.activation:jakarta.activation:jar:1.2.2
+    License: EDL 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+  - istack common utility code runtime (https://projects.eclipse.org/projects/ee4j/istack-commons/istack-commons-runtime) com.sun.istack:istack-commons-runtime:jar:3.0.10
+    License: Eclipse Distribution License - v 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+  - Jakarta XML Binding API (https://github.com/eclipse-ee4j/jaxb-api/jakarta.xml.bind-api) jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3
+    License: Eclipse Distribution License - v 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+  - JAXB Runtime (https://eclipse-ee4j.github.io/jaxb-ri/jaxb-runtime-parent/jaxb-runtime) org.glassfish.jaxb:jaxb-runtime:jar:2.3.3
+    License: Eclipse Distribution License - v 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+  - TXW2 Runtime (https://eclipse-ee4j.github.io/jaxb-ri/jaxb-txw-parent/txw2) org.glassfish.jaxb:txw2:jar:2.3.3
+    License: Eclipse Distribution License - v 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
 From: 'Eclipse.org - EclipseLink Project' (http://www.eclipse.org/eclipselink)
   - Javax Persistence (http://www.eclipse.org/eclipselink) org.eclipse.persistence:javax.persistence:jar:2.1.0
     License: Eclipse Public License v1.0  (http://www.eclipse.org/legal/epl-v10.html)    License: Eclipse Distribution License v. 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+From: 'fasterxml.com' (https://fasterxml.com)
+  - ClassMate (https://github.com/FasterXML/java-classmate) com.fasterxml:classmate:bundle:1.5.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
 
 From: 'GlassFish Community' (https://glassfish.java.net)
   - javax.transaction API (http://jta-spec.java.net) javax.transaction:javax.transaction-api:jar:1.2
     License: CDDL + GPLv2 with classpath exception  (https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html)
 
+From: 'Hibernate.org' (http://hibernate.org)
+  - Hibernate ORM - hibernate-core (http://hibernate.org/orm) org.hibernate:hibernate-core:jar:5.4.29.Final
+    License: GNU Library General Public License v2.1 or later  (http://www.opensource.org/licenses/LGPL-2.1)
+  - Hibernate ORM - hibernate-entitymanager (http://hibernate.org/orm) org.hibernate:hibernate-entitymanager:jar:5.4.29.Final
+    License: GNU Library General Public License v2.1 or later  (http://www.opensource.org/licenses/LGPL-2.1)
+  - Hibernate Commons Annotations (http://hibernate.org) org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final
+    License: GNU Library General Public License v2.1 or later  (http://www.opensource.org/licenses/LGPL-2.1)
+
+From: 'JBoss by Red Hat' (http://www.jboss.org)
+  - Java Annotation Indexer (http://www.jboss.org/jandex) org.jboss:jandex:bundle:2.2.3.Final
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JBoss Logging 3 (http://www.jboss.org) org.jboss.logging:jboss-logging:jar:3.4.1.Final
+    License: Apache License, version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Java Transaction API (http://www.jboss.org/jboss-transaction-api_1.2_spec) org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.1.1.Final
+    License: Common Development and Distribution License  (http://repository.jboss.org/licenses/cddl.txt)    License: GNU General Public License, Version 2 with the Classpath Exception  (http://repository.jboss.org/licenses/gpl-2.0-ce.txt)
+
+From: 'Oracle' (http://www.oracle.com)
+  - JavaBeans Activation Framework API jar (http://java.net/all/javax.activation-api/) javax.activation:javax.activation-api:jar:1.2.0
+    License: CDDL/GPLv2+CE  (https://github.com/javaee/activation/blob/master/LICENSE.txt)
+
+From: 'Oracle Corporation' (http://www.oracle.com)
+  - MySQL Connector/J (http://dev.mysql.com/doc/connector-j/en/) mysql:mysql-connector-java:jar:8.0.25
+    License: The GNU General Public License, v2 with FOSS exception 
+
 From: 'Oracle Corporation' (http://www.oracle.com/)
   - javax.interceptor API (https://github.com/javaee/javax.interceptor) javax.interceptor:javax.interceptor-api:jar:1.2.2
     License: CDDL + GPLv2 with classpath exception  (https://oss.oracle.com/licenses/CDDL+GPL-1.1)
+  - jaxb-api (https://github.com/javaee/jaxb-spec/jaxb-api) javax.xml.bind:jaxb-api:jar:2.3.1
+    License: CDDL 1.1  (https://oss.oracle.com/licenses/CDDL+GPL-1.1)    License: GPL2 w/ CPE  (https://oss.oracle.com/licenses/CDDL+GPL-1.1)
 
 From: 'OSGi Alliance' (http://www.osgi.org/)
   - org.osgi:osgi.cmpn (http://www.osgi.org/) org.osgi:osgi.cmpn:jar:6.0.0
@@ -25,6 +81,10 @@ From: 'OSGi Alliance' (http://www.osgi.org/)
 From: 'QOS.ch' (http://www.qos.ch)
   - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.7.29
     License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'Shigeru Chiba, www.javassist.org'
+  - Javassist (http://www.javassist.org/) org.javassist:javassist:bundle:3.27.0-GA
+    License: MPL 1.1  (http://www.mozilla.org/MPL/MPL-1.1.html)    License: LGPL 2.1  (http://www.gnu.org/licenses/lgpl-2.1.html)    License: Apache License 2.0  (http://www.apache.org/licenses/)
 
 From: 'The Apache Software Foundation' (http://www.apache.org/)
   - Apache Aries JPA Container API (http://www.apache.org/org.apache.aries.jpa.parent/org.apache.aries.jpa.api/) org.apache.aries.jpa:org.apache.aries.jpa.api:bundle:2.7.2
