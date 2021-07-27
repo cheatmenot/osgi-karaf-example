@@ -18,7 +18,7 @@
       <dependency>
         <groupId>org.glassfish.jersey</groupId>
         <artifactId>jersey-bom</artifactId>
-        <version>3.0.2</version>
+        <version>2.34</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -50,7 +50,7 @@
     <!-- Grizzly2 HTTP Server -->
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
-      <artifactId>jersey-container-grizzly2-http</artifactId>
+      <artifactId>jersey-container-jetty-http</artifactId>
     </dependency>
 
     <!-- Jersey related and HK2 dependency injection -->
@@ -86,7 +86,6 @@
           <instructions>
             <Export-Package>!*</Export-Package>
             <Import-Package>
-              jakarta.ws.rs,
               *
             </Import-Package>
             <Bundle-Activator>com.eycads.rest.jersey.Activator</Bundle-Activator>

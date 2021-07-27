@@ -52,12 +52,13 @@
     </feature>
 
     <feature name="rest-jersey" version="4.2.11">
-        <requirement>osgi.service;effective:=active;filter:=(objectClass=org.osgi.service.http.HttpService)</requirement>
-        <feature dependency="true">scr</feature>
-        <feature version="3.4.0" dependency="true">cxf-jaxrs</feature>
-        <bundle dependency="true">mvn:org.glassfish.jersey.containers/jersey-container-grizzly2-http/3.0.2</bundle>
-        <bundle dependency="true">mvn:org.glassfish.jersey.inject/jersey-hk2/3.0.2</bundle>
-        <bundle dependency="true">mvn:jakarta.activation/jakarta.activation-api/2.0.1</bundle>
+<!--        <feature dependency="true">http</feature>-->
+<!--        <requirement>osgi.service;effective:=active;filter:=(objectClass=org.osgi.service.http.HttpService)</requirement>-->
+<!--        <feature dependency="true">scr</feature>-->
+<!--        <feature version="3.4.0" dependency="true">cxf-jaxrs</feature>-->
+        <bundle dependency="true">mvn:org.glassfish.jersey.containers/jersey-container-jetty-http/2.34</bundle>
+        <bundle dependency="true">mvn:org.glassfish.jersey.inject/jersey-hk2/2.34</bundle>
+<!--        <bundle dependency="true">mvn:jakarta.activation/jakarta.activation-api/2.0.1</bundle>-->
         <bundle>mvn:com.eycads/rest-jersey/4.2.11</bundle>
     </feature>
 
