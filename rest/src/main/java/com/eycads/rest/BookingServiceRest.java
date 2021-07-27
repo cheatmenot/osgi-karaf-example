@@ -1,9 +1,10 @@
 package com.eycads.rest;
 
 import com.eycads.common.Booking;
-import com.eycads.common.BookingService;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
+import com.eycads.rest.redis.DistributedMemory;
+import com.eycads.rest.redis.JedisDistributedMemory;
+import redis.clients.jedis.DefaultJedisClientConfig;
+import redis.clients.jedis.HostAndPort;
 
 import javax.ws.rs.*;
 import java.util.Collection;
@@ -22,6 +23,12 @@ public class BookingServiceRest implements ApiCrudInterface {
     
     private final Map<Long, Booking> bookings = new HashMap<>();
 
+    private HostAndPort hostAndPort = new HostAndPort("localhost", 6379);
+    private DefaultJedisClientConfig conf = DefaultJedisClientConfig.builder()
+        .password("alona")
+        .build();
+    private DistributedMemory dm = new JedisDistributedMemory(hostAndPort, conf);
+
     @Override
     @Path("/")
     @Produces("application/json")
@@ -29,8 +36,6 @@ public class BookingServiceRest implements ApiCrudInterface {
     public Collection<Booking> list() {
         System.out.println(ServiceCatcher.getBookingService());
         return ServiceCatcher.getBookingService().list();
-//        return bookingService.list();
-//        return bookings.values();
     }
 
     @Override
@@ -47,7 +52,6 @@ public class BookingServiceRest implements ApiCrudInterface {
     @POST
     public void add(Booking booking) {
         ServiceCatcher.getBookingService().add(booking);
-//        bookings.put(booking.getId(), booking);
     }
 
     @Override
@@ -64,5 +68,20 @@ public class BookingServiceRest implements ApiCrudInterface {
     @DELETE
     public void remove(@PathParam("id") Long id) {
         bookings.remove(id);
+    }
+
+    @Path("/redis/{id}")
+    @Produces("application/json")
+    @GET
+    public String getRedis(@PathParam("id") String id) {
+        return dm.get(id);
+    }
+
+    @Path("/redis")
+    @Produces("application/json")
+    @POST
+    public Booking getRedis(Booking booking) {
+        dm.set(booking.getCustomer(), booking.getFlight());
+        return booking;
     }
 }

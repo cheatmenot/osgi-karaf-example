@@ -7,9 +7,19 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://mvn.va.keybridge.ch/artifactory/libs-release" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="ops4j.sonatype.snapshots.deploy" />
       <option name="name" value="OPS4J snapshot repository" />
       <option name="url" value="https://oss.sonatype.org/content/repositories/ops4j-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="apache.snapshots" />
+      <option name="name" value="Apache Snapshot Repository" />
+      <option name="url" value="http://mvn.va.keybridge.ch/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="nexus" />
@@ -22,6 +32,11 @@
       <option name="url" value="https://repository.apache.org/snapshots" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="apache-snapshots" />
+      <option name="name" value="Apache Snapshots Repository" />
+      <option name="url" value="http://mvn.va.keybridge.ch/artifactory/libs-release" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Maven Central repository" />
       <option name="url" value="https://repo1.maven.org/maven2" />
@@ -32,9 +47,19 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="nexus" />
+      <option name="name" value="central" />
+      <option name="url" value="http://mvn.va.keybridge.ch/artifactory/libs-release" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="apache-snapshots" />
       <option name="name" value="Apache Snapshots Repository" />
       <option name="url" value="http://repository.apache.org/content/groups/snapshots-group" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ops4j.sonatype.snapshots.deploy" />
+      <option name="name" value="OPS4J snapshot repository" />
+      <option name="url" value="http://mvn.va.keybridge.ch/artifactory/libs-release" />
     </remote-repository>
   </component>
 </project>

@@ -6,21 +6,22 @@
     <artifactId>osgi-karaf-example</artifactId>
     <groupId>com.eycads</groupId>
     <version>4.2.11</version>
-    <relativePath>../pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>rest</artifactId>
-  <name>Eycads :: Rest</name>
+  <artifactId>rest-jersey</artifactId>
+  <name>Eycads :: Rest :: Jersey</name>
   <packaging>bundle</packaging>
-
-  <properties>
-    <maven.compiler.source>8</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target>
-  </properties>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.glassfish.jersey</groupId>
+        <artifactId>jersey-bom</artifactId>
+        <version>3.0.2</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <dependency>
         <groupId>org.apache.karaf</groupId>
         <artifactId>karaf-bom</artifactId>
@@ -31,6 +32,11 @@
     </dependencies>
   </dependencyManagement>
 
+  <properties>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.osgi</groupId>
@@ -40,34 +46,32 @@
       <groupId>org.osgi</groupId>
       <artifactId>osgi.cmpn</artifactId>
     </dependency>
+
+    <!-- Grizzly2 HTTP Server -->
     <dependency>
-      <groupId>org.apache.cxf</groupId>
-      <artifactId>cxf-rt-transports-http-jetty</artifactId>
-      <version>${cxf.version}</version>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-grizzly2-http</artifactId>
     </dependency>
+
+    <!-- Jersey related and HK2 dependency injection -->
     <dependency>
-      <groupId>org.apache.cxf</groupId>
-      <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-      <version>${cxf.version}</version>
+      <groupId>org.glassfish.jersey.inject</groupId>
+      <artifactId>jersey-hk2</artifactId>
     </dependency>
+
+    <!-- Need this to hide warning for jakarta.activation.DataSource -->
     <dependency>
-      <groupId>com.eycads</groupId>
-      <artifactId>common</artifactId>
-      <version>${project.version}</version>
+      <groupId>jakarta.activation</groupId>
+      <artifactId>jakarta.activation-api</artifactId>
+      <version>2.0.1</version>
     </dependency>
+
+    <!-- JUnit 5 -->
     <dependency>
-      <groupId>com.fasterxml.jackson.jaxrs</groupId>
-      <artifactId>jackson-jaxrs-json-provider</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.karaf.shell</groupId>
-      <artifactId>org.apache.karaf.shell.core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>redis.clients</groupId>
-      <artifactId>jedis</artifactId>
-      <version>3.6.0</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.7.0</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -81,14 +85,15 @@
         <configuration>
           <instructions>
             <Export-Package>!*</Export-Package>
-            <Import-Package>*</Import-Package>
-            <Bundle-Activator>com.eycads.rest.Activator</Bundle-Activator>
-<!--            <Private-Package>-->
-<!--              com.eycads.rest-->
-<!--            </Private-Package>-->
+            <Import-Package>
+              jakarta.ws.rs,
+              *
+            </Import-Package>
+            <Bundle-Activator>com.eycads.rest.jersey.Activator</Bundle-Activator>
           </instructions>
         </configuration>
       </plugin>
     </plugins>
   </build>
+
 </project>
